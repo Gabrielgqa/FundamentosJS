@@ -35,3 +35,28 @@ displaySquare(square);
         console.log(x);
     })(2)
 })(5);
+
+// Q5 - Hoisting in Functions
+
+printSomething(); // this works
+
+function printSomething(){
+    console.log(printSomething);
+}
+
+// Q6 - Params vs Arguments
+
+function square(num) { // Params
+    return num * num;
+}
+
+square(2); // Arguments
+
+// Q7 - Spread operators vs Rest operators
+
+function multiply(...nums) {
+    console.log(nums[0] * nums[1]); // Rest operators
+}
+
+var arr = [5, 6];
+multiply(...arr); // Spread operators
