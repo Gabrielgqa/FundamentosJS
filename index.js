@@ -54,9 +54,27 @@ square(2); // Arguments
 
 // Q7 - Spread operators vs Rest operators
 
-function multiply(...nums) {
-    console.log(nums[0] * nums[1]); // Rest operators
+function multiply(...nums) {// Rest operators
+    console.log(nums[0] * nums[1]); 
 }
 
 var arr = [5, 6];
 multiply(...arr); // Spread operators
+
+// Q8 - Callback function
+
+//A callback function is a function passed into another function as an argument, 
+//which is then invoked inside the outer function to complete some kind of routine or action.
+function greeting(name) {
+    alert(`Hello, ${name}`);
+  }
+  
+  function processUserInput(callback) {
+    const name = prompt("Please enter your name.");
+    callback(name);
+  }
+  
+  processUserInput(greeting);
+
+// Q9 - Arrow functions
+const add = (fistNum, secondNum) => { return fistNum + secondNum };
